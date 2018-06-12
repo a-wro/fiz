@@ -19,12 +19,13 @@ def calcPi(e=None):
     ax.add_patch(circle)
     ax.set_aspect('equal')
 
-
+    
     inside = len(insideX)
     pi_est = (inside / n) * 4.0
     diff = np.pi - pi_est
     diffLabelSv.set('Difference: ' + str(diff))
     piLabelSv.set('Estimation: ' + str(pi_est))
+    plt.title(inp.get() + ' points,\n estimation: ' + str(pi_est))
 
 
 def show(e=None):
